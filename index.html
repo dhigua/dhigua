@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Biocontrol de Nematodos con Hongos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-value {
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 700;
+            color: #0077B6;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .kpi-label {
+            font-size: 1.25rem;
+            color: #023047;
+            font-weight: 600;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #00B4D8;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #023047;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-[#0077B6] text-white py-12 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">La Revolución Silenciosa del Suelo</h1>
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-90">Cómo los hongos nematófagos están redefiniendo el control de plagas para una agricultura sostenible.</p>
+        
+        <div class="mt-6">
+            <p class="text-xl md:text-2xl text-[#FFC300]">Daniel Esteban Higua, Facultad de Ciencias Agrarias</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="problema" class="my-12">
+            <h2 class="text-3xl font-bold text-center mb-4">El Enemigo Invisible: La Amenaza Global de los Nematodos</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-lg">Estos gusanos microscópicos, invisibles a simple vista, representan uno de los mayores desafíos para la agricultura mundial, causando daños económicos masivos y debilitando la seguridad alimentaria.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="card">
+                    <div class="kpi-value" style="color:#FFC300;">$80 Mil Millones</div>
+                    <div class="kpi-label">Pérdidas Anuales Globales</div>
+                    <p class="mt-4 text-gray-600">Una cifra astronómica que refleja el impacto devastador de los nematodos en la economía agrícola mundial.</p>
+                </div>
+                <div class="card">
+                    <div class="kpi-value" style="color:#FFC300;">11-14%</div>
+                    <div class="kpi-label">De la Producción Agrícola Perdida</div>
+                    <p class="mt-4 text-gray-600">Más de una décima parte de los cultivos de importancia económica se pierde anualmente debido a esta plaga oculta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucion-quimica" class="my-16 bg-gray-100 py-12 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-4">El Paradigma Químico: Una Solución con Costos Ocultos</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-lg">Durante décadas, la respuesta ha sido química. Sin embargo, el uso de nematicidas sintéticos ha revelado ser una espada de doble filo, con graves consecuencias para la salud y el medio ambiente.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                <div class="card text-center">
+                    <div class="text-6xl mb-4">☣️</div>
+                    <h3 class="text-xl font-bold">Riesgos para la Salud Humana</h3>
+                    <p class="text-gray-600">Millones de trabajadores agrícolas sufren envenenamientos anualmente. La exposición se asocia a enfermedades crónicas graves.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-6xl mb-4">🌍</div>
+                    <h3 class="text-xl font-bold">Daño Ambiental</h3>
+                    <p class="text-gray-600">Contaminación persistente de suelo y agua, afectando la biodiversidad y matando organismos benéficos.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-6xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold">Generación de Resistencia</h3>
+                    <p class="text-gray-600">El uso continuo hace que los nematodos se vuelvan resistentes, reduciendo la eficacia de los tratamientos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="biocontrol" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-4">La Respuesta de la Naturaleza: Hongos al Rescate</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-lg">El control biológico emerge como una alternativa poderosa y sostenible. Utilizando organismos vivos, como los hongos nematófagos, podemos controlar las plagas de forma segura, eficaz y en armonía con el ecosistema.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-center mb-4">Mecanismo de un Asesino Natural</h3>
+                    <p class="mb-6 text-gray-600">El parasitismo es un proceso sofisticado en múltiples pasos:</p>
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="w-full p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
+                            <h4 class="font-bold">1. Reconocimiento y Adhesión</h4>
+                            <p class="text-sm text-gray-600">El hongo atrae y se adhiere firmemente al huevo o cutícula del nematodo.</p>
+                        </div>
+                        <div class="text-2xl text-[#00B4D8]">↓</div>
+                        <div class="w-full p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
+                            <h4 class="font-bold">2. Penetración Enzimática</h4>
+                            <p class="text-sm text-gray-600">Secreta un cóctel de enzimas (quitinasas, proteasas) que disuelven las defensas del nematodo.</p>
+                        </div>
+                        <div class="text-2xl text-[#00B4D8]">↓</div>
+                        <div class="w-full p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
+                            <h4 class="font-bold">3. Colonización y Muerte</h4>
+                            <p class="text-sm text-gray-600">Una vez dentro, el hongo crece y libera toxinas, consumiendo al huésped desde el interior.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                     <h3 class="text-xl font-bold text-center mb-4">Tipos de Hongos Nematófagos</h3>
+                    <p class="mb-6 text-gray-600">No todos los hongos cazan igual. Se clasifican según sus ingeniosas estrategias de ataque:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center p-2 bg-gray-50 rounded-lg"><span class="text-3xl mr-4">🕸️</span><div><strong class="text-[#0077B6]">Atrapadores (Predadores):</strong> Crean trampas como redes adhesivas o anillos constrictores.</div></li>
+                        <li class="flex items-center p-2 bg-gray-50 rounded-lg"><span class="text-3xl mr-4">🥚</span><div><strong class="text-[#0077B6]">Parásitos de Huevos:</strong> Se especializan en infectar los huevos, destruyendo la siguiente generación.</div></li>
+                        <li class="flex items-center p-2 bg-gray-50 rounded-lg"><span class="text-3xl mr-4">🍄</span><div><strong class="text-[#0077B6]">Endoparásitos:</strong> Sus esporas se adhieren y germinan dentro del cuerpo del nematodo.</div></li>
+                        <li class="flex items-center p-2 bg-gray-50 rounded-lg"><span class="text-3xl mr-4">🧪</span><div><strong class="text-[#0077B6]">Productores de Toxinas:</strong> Liberan compuestos que paralizan o matan a los nematodos a distancia.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="eficacia" class="my-16 bg-gray-100 py-12 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-4">Los Campeones del Biocontrol: Eficacia Comprobada</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-lg">La investigación científica y los ensayos de campo han demostrado el increíble potencial de especies fúngicas clave. Sus resultados hablan por sí solos.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-center">Eficacia en Control de Nematodos</h3>
+                    <p class="mb-4 text-center text-gray-600">Diversos estudios muestran altos porcentajes de control, tanto en laboratorio como en campo.</p>
+                    <div class="chart-container h-96">
+                        <canvas id="efficacyChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card">
+                    <h3 class="text-xl font-bold text-center">Rendimiento en Cultivo de Banano</h3>
+                    <p class="mb-4 text-center text-gray-600">Un estudio clave reveló que la combinación de hongos superó al químico en el peso de los racimos.</p>
+                    <div class="chart-container h-96">
+                        <canvas id="bananaYieldChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparacion" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-4">Fúngico vs. Químico: El Veredicto</h2>
+             <p class="text-center max-w-3xl mx-auto mb-10 text-lg">Al ponerlos frente a frente, las ventajas del biocontrol fúngico son claras, ofreciendo una solución que beneficia al productor, al consumidor y al planeta.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left rounded-lg overflow-hidden shadow-lg">
+                    <thead class="bg-[#023047] text-white">
+                        <tr>
+                            <th class="p-4 font-semibold">Característica</th>
+                            <th class="p-4 font-semibold text-center">✅ Nematicidas Fúngicos</th>
+                            <th class="p-4 font-semibold text-center">❌ Nematicidas Químicos</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Impacto Ambiental</td>
+                            <td class="p-4 text-green-600">Mínimo, biodegradable.</td>
+                            <td class="p-4 text-red-600">Alto, contaminante.</td>
+                        </tr>
+                         <tr class="border-b bg-gray-50">
+                            <td class="p-4 font-semibold">Seguridad Humana</td>
+                            <td class="p-4 text-green-600">Bajo riesgo, sin residuos.</td>
+                            <td class="p-4 text-red-600">Alto riesgo de envenenamiento.</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Desarrollo de Resistencia</td>
+                            <td class="p-4 text-green-600">Muy bajo (múltiples acciones).</td>
+                            <td class="p-4 text-red-600">Alto y rápido.</td>
+                        </tr>
+                         <tr class="border-b bg-gray-50">
+                            <td class="p-4 font-semibold">Beneficios Adicionales</td>
+                            <td class="p-4 text-green-600">Promueven el crecimiento.</td>
+                            <td class="p-4 text-red-600">Ninguno, pueden ser dañinos.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold">Velocidad de Acción</td>
+                            <td class="p-4">Más lenta y sostenida.</td>
+                            <td class="p-4">Rápida, pero a corto plazo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="aplicacion" class="my-16 bg-gray-100 py-12 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-4">Claves para el Éxito en el Campo</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-lg">Para maximizar la eficacia de estos aliados vivos, es crucial una aplicación correcta, considerando las condiciones que favorecen su supervivencia y actividad.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+                <div class="card text-center">
+                    <div class="text-5xl mb-4">🌡️</div>
+                    <h3 class="text-xl font-bold">Temperatura</h3>
+                    <p class="text-gray-600">Suelo idealmente entre 15-21°C. Evitar extremos.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-5xl mb-4">💧</div>
+                    <h3 class="text-xl font-bold">Humedad</h3>
+                    <p class="text-gray-600">Esencial para la actividad fúngica. Regar antes y después.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-5xl mb-4">☀️</div>
+                    <h3 class="text-xl font-bold">Protección UV</h3>
+                    <p class="text-gray-600">Aplicar al atardecer o en días nublados para proteger las esporas.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-5xl mb-4">🌱</div>
+                    <h3 class="text-xl font-bold">Materia Orgánica</h3>
+                    <p class="text-gray-600">Un suelo sano y rico en materia orgánica fomenta la población de hongos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="futuro" class="my-16 text-center">
+            <h2 class="text-3xl font-bold mb-4">El Futuro es Fúngico: Hacia un Manejo Integrado</h2>
+            <p class="max-w-4xl mx-auto text-lg">La solución no es una sola herramienta, sino la integración inteligente de múltiples estrategias. Los nematicidas fúngicos son un pilar fundamental del Manejo Integrado de Plagas (MIP), combinándose con rotación de cultivos, plantas resistentes y otras prácticas sostenibles para crear sistemas agrícolas resilientes y productivos para el futuro.</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#023047] text-white text-center p-6">
+        <p>Infografía generada a partir del informe "Biocontrol de Nematodos Fitoparásitos".</p>
+        <p class="text-sm opacity-75">Un enfoque sostenible para la agricultura del siglo XXI.</p>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = ''; 
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const chartOptionsBase = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#023047',
+                        font: {
+                            size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#023047',
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#FFFFFF',
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: '#023047' },
+                    grid: { color: 'rgba(2, 48, 71, 0.1)' }
+                },
+                x: {
+                    ticks: { color: '#023047' },
+                    grid: { display: false }
+                }
+            }
+        };
+
+        const efficacyCtx = document.getElementById('efficacyChart').getContext('2d');
+        const efficacyLabels = [
+            'A. musiformis (Predación in vitro)', 
+            'D. flagrans (Reducción larvas)',
+            'A. flavus (Reducción agallas)',
+            'P. lilacinum (Reducción daño tomate)',
+            'P. chlamydosporia (Infección huevos)'
+            ];
+        new Chart(efficacyCtx, {
+            type: 'bar',
+            data: {
+                labels: efficacyLabels.map(wrapLabel),
+                datasets: [{
+                    label: '% de Eficacia',
+                    data: [96.8, 92, 90, 80, 68],
+                    backgroundColor: '#00B4D8',
+                    borderColor: '#0077B6',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                 ...chartOptionsBase,
+                 indexAxis: 'y',
+                 plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: chartOptionsBase.plugins.tooltip
+                 },
+                 scales: {
+                    y: {
+                        ticks: { color: '#023047', font: { size: 10 } },
+                        grid: { display: false }
+                    },
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { 
+                            color: '#023047',
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        },
+                        grid: { color: 'rgba(2, 48, 71, 0.1)' }
+                    }
+                }
+            }
+        });
+        
+        const bananaYieldCtx = document.getElementById('bananaYieldChart').getContext('2d');
+        const bananaLabels = [
+            'T. harzianum + P. lilacinus', 
+            'Trichoderma solo',
+            'Paecilomyces solo',
+            'Control Químico (Oxamil)'
+            ];
+        new Chart(bananaYieldCtx, {
+            type: 'bar',
+            data: {
+                labels: bananaLabels.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Peso Racimos (kg)',
+                        data: [25.28, 23.63, 22.43, 20.35],
+                        backgroundColor: '#FFC300',
+                        borderColor: '#E6AD00',
+                        borderWidth: 2,
+                        borderRadius: 5
+                    },
+                    {
+                        label: 'Peso Raíces (g)',
+                        data: [125.4, 114.7, 123.6, 126.15],
+                        backgroundColor: '#0077B6',
+                        borderColor: '#005A8D',
+                        borderWidth: 2,
+                        borderRadius: 5
+                    }
+                ]
+            },
+            options: {
+                 ...chartOptionsBase,
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: '#023047' },
+                        grid: { color: 'rgba(2, 48, 71, 0.1)' }
+                    },
+                    x: {
+                        ticks: { color: '#023047', font: {size: 10} },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
